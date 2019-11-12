@@ -5,13 +5,15 @@
 }
 
 .container {
+        align-items: center;
         display: flex;
         flex-flow: column nowrap;
-        align-items: center;
+        width: 100%;
 }
 
 .content {
         width: 50%;
+        background-color: #00ff00;
 }
 
 .nav-bar {
@@ -26,9 +28,11 @@
         display: flex;
         flex-flow: row-reverse nowrap;
         align-items: flex-start;
-        justify-content: space-evenly;
+        justify-content: flex-end;
+        width: 100%;
 }
 
 .sidebar {
         width: 25%;
+        background-color: #ff0000;
 }

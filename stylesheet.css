@@ -10,10 +10,25 @@
         align-items: center;
 }
 
+.content {
+        width: 50%;
+}
+
 .nav-bar {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
         margin: 1rem 0 2rem 0;
         width: 66%;
+}
+
+.page {
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        align-items: flex-start;
+        justify-content: space-evenly;
+}
+
+.sidebar {
+        width: 25%;
 }

@@ -36,3 +36,15 @@
         width: 25%;
         background-color: #ff0000;
 }
+
+@media all and (max-width: 500px) {
+        .page {
+                align-items: center;
+                flex-direction: column;
+                justify-content: flex-start;
+        }
+
+        .sidebar {
+                width: 50%;
+        }
+}

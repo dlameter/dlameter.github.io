@@ -3,3 +3,13 @@
         color: #22232a;
         background-color: #f3f3f3;
 }
+
+.container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+}
+
+.header {
+        width: 66%;
+}

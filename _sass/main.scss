@@ -1,7 +1,11 @@
+$dark: #22232a;
+$highlight: #555;
+$background: #f3f3f3;
+
 * {
         font-family: 'Source Sans Pro', sans-serif;
-        color: #22232a;
-        background-color: #f3f3f3;
+        color: $dark;
+        background-color: $background;
 }
 
 p {
@@ -25,8 +29,16 @@ p {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
-        margin: 1rem 0 2rem 0;
+        margin: 1rem auto 2rem;
         width: 66%;
+}
+
+.nav-link {
+  color: $dark;
+}
+
+.nav-link-current {
+  color: $highlight;
 }
 
 .page {

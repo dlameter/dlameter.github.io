@@ -2,34 +2,38 @@ $dark: #22232a;
 $highlight: #555;
 $background: #f3f3f3;
 
+$large-main-width: 50%;
+$large-sidebar-width: 25%;
+$mobile-width: 75%;
+
 * {
-        font-family: 'Source Sans Pro', sans-serif;
-        color: $dark;
-        background-color: $background;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $dark;
+  background-color: $background;
 }
 
 p {
-        font-size: 1.25rem;
-        line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
 }
 
 .container {
-        align-items: center;
-        display: flex;
-        flex-flow: column nowrap;
-        width: 100%;
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
 }
 
 .content {
-        width: 50%;
+  width: $large-main-width;
 }
 
 .nav-bar {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        margin: 1rem auto 2rem;
-        width: 66%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin: 1rem auto 2rem;
+  width: 66%;
 }
 
 .nav-link {
@@ -41,25 +45,33 @@ p {
 }
 
 .page {
-        display: flex;
-        flex-flow: row-reverse nowrap;
-        align-items: flex-start;
-        justify-content: flex-end;
-        width: 100%;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .sidebar {
-        width: 25%;
+  width: $large-sidebar-width;
+}
+
+.text-center {
+  text-align: center;
 }
 
 @media all and (max-width: 500px) {
-        .page {
-                align-items: center;
-                flex-direction: column;
-                justify-content: flex-start;
-        }
+  .content {
+    width: $mobile-width;
+  }
 
-        .sidebar {
-                width: 50%;
-        }
+  .page {
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .sidebar {
+    width: $mobile-width;
+  }
 }

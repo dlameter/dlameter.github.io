@@ -1,10 +1,13 @@
 $dark: #22232a;
 $highlight: #555;
+$hor-rule-color: #ddd9d6;
 $background: #f3f3f3;
 
 $large-main-width: 50%;
 $large-sidebar-width: 25%;
 $mobile-width: 85%;
+$nav-link-margins: 0 2rem 0 2rem;
+$nav-link-margins-first: 0 2rem 0 0;
 
 $animation-float-up: 'float-up 0.10s ease 1';
 
@@ -75,7 +78,7 @@ $animation-float-up: 'float-up 0.10s ease 1';
     background-color: $color;
     visibility: hidden;
     @include transform(scaleX(0));
-    @include transition(all 0.3s ease-in-out 0s);
+    @include transition(all 0.1s ease-in-out 0s);
   }
 
   &:hover:before {
@@ -88,6 +91,15 @@ $animation-float-up: 'float-up 0.10s ease 1';
   font-family: 'Source Sans Pro', sans-serif;
   color: $dark;
   background-color: $background;
+}
+
+body {
+  margin-right: calc(100vw - 100%);
+}
+
+html {
+  margin-right: calc(100% - 100vw);
+  overflow-x: hidden;
 }
 
 p {
@@ -128,29 +140,70 @@ p {
   }
 }
 
+.hor-rule {
+  background-color: $hor-rule-color;
+  height: 1px;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.jumbotron {
+  width: 100%;
+}
+
+.mugshot {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100%;
+
+  img {
+    border-radius: 50%;
+    align-self: center;
+  }
+}
+
 .nav-bar {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin: 1rem auto 2rem;
-  width: 66%;
+  position: relative;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 50%;
 }
 
 .nav-link {
   color: $dark;
   font-size: 1.25rem;
   font-weight: bold;
+  margin: $nav-link-margins;
   line-height: 2rem;
   text-decoration: none;
   @include growing-underline($dark);
+
+  &:first-child {
+    margin: $nav-link-margins-first;
+  }
 
   &-current {
     color: $highlight;
     font-size: 1.25rem;
     font-weight: bold;
+    margin: $nav-link-margins;
     line-height: 2rem;
     text-decoration: none;
     @include growing-underline($highlight);
+
+    &:first-child {
+      margin: $nav-link-margins-first;
+    }
   }
 }
 
@@ -170,20 +223,16 @@ p {
   text-align: center;
 }
 
-@include keyframes(float-up) {
-  0% {
-    transform-origin: center bottom;
-    transform: scale(1,1);
-  }
-
-  to {
-    transform-origin: center bottom;
-    transform: scale(1.1,1.1);
-  }
-}
-
 @media all and (max-width: 500px) {
   .content {
+    width: $mobile-width;
+  }
+
+  .nav-bar {
+    width: $mobile-width;
+  }
+
+  .nav-container {
     width: $mobile-width;
   }
 
@@ -195,5 +244,27 @@ p {
 
   .sidebar {
     width: $mobile-width;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .nav-bar {
+    justify-content: space-around;
+  }
+
+  .nav-link {
+    margin: 0 0 0 0;
+
+    &:first-child {
+      margin: 0 0 0 0;
+    }
+
+    &-current {
+      margin: 0 0 0 0;
+
+      &:first-child {
+        margin: 0 0 0 0;
+      }
+    }
   }
 }

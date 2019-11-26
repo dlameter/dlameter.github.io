@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: "My First Post!"
+author: Dominik Lameter
 ---
 Welcome to my site! This is the start of a portfolio of projects and topics I find intriguing. I hope to place descriptions and demos of projects as well as how I went about writting/building them. These projects bring me joy and I hope I can inspire you to go down the rabit hole of what interests you!
 

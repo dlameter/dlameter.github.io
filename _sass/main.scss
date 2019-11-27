@@ -132,6 +132,22 @@ p {
   line-height: 2rem;
 }
 
+.contact-header {
+  color: $highlight;
+}
+
+.contact-section {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+
+  > * {
+    margin: 0 1rem;
+  }
+}
+
 .container {
   align-items: center;
   display: flex;
@@ -169,11 +185,27 @@ p {
   }
 }
 
+.footer {
+  width: 100%;
+  margin: 1rem 0 1rem;
+
+  * {
+    text-align: center;
+  }
+}
+
 .hor-rule {
   background-color: $hor-rule-color;
   height: 1px;
   margin-bottom: 1.5rem;
   width: 100%;
+}
+
+.icon-link {
+  background-color: $highlight;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
 }
 
 .jumbotron {
@@ -270,6 +302,12 @@ p {
 
 .text-center {
   text-align: center;
+}
+
+.vert-rule {
+  background-color: $hor-rule-color;
+  height: 2rem;
+  width: 2px;
 }
 
 @media all and (max-width: 500px) {

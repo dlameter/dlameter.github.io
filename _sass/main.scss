@@ -9,7 +9,7 @@ $hor-rule-color: #ddd9d6;
 $link-visited-color: #8bc24c;
 
 $large-main-width: 50%;
-$large-sidebar-width: 25%;
+$large-sidebar-width: 23%;
 $mobile-width: 85%;
 $nav-link-margins: 0 2rem 0 2rem;
 $nav-link-margins-first: 0 2rem 0 0;
@@ -208,8 +208,11 @@ p {
 }
 
 .icon-link {
+  @include box-shadow;
   background-color: $highlight;
   border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
   padding: 0.5rem;
 
   a img {
@@ -297,13 +300,15 @@ p {
   display: flex;
   flex-flow: row-reverse nowrap;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: space-around;
   width: 100%;
   margin-bottom: 10rem;
 }
 
 .sidebar {
   width: $large-sidebar-width;
+  border-radius: 0px 5px 5px 0px;
+  border-right: 2px solid $hor-rule-color;
 }
 
 .spacer {

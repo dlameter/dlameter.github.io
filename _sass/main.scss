@@ -1,10 +1,11 @@
+$background: #f3f3f3;
+$date-color: #555;
 $dark: #22232a;
 //$highlight: #30b337;
 //$highlight: #02a82e;
 $highlight: #269d02;
-$date-color: #555;
 $hor-rule-color: #ddd9d6;
-$background: #f3f3f3;
+$link-visited-color: #8bc24c;
 
 $large-main-width: 50%;
 $large-sidebar-width: 25%;
@@ -111,6 +112,10 @@ $animation-float-up: 'float-up 0.10s ease 1';
 
 a {
   color: $highlight;
+
+  &:visited {
+    color: $link-visited-color;
+  }
 }
 
 body {
@@ -219,6 +224,10 @@ p {
   text-decoration: none;
   @include growing-underline($dark);
 
+  &:visited {
+    color: $dark;
+  }
+
   &:first-child {
     margin: $nav-link-margins-first;
   }
@@ -231,6 +240,10 @@ p {
     line-height: 2rem;
     text-decoration: none;
     @include growing-underline($highlight);
+
+    &:visited {
+      color: $highlight;
+    }
 
     &:first-child {
       margin: $nav-link-margins-first;
@@ -247,6 +260,10 @@ p {
 }
 
 .sidebar {
+  width: $large-sidebar-width;
+}
+
+.spacer {
   width: $large-sidebar-width;
 }
 

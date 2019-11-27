@@ -1,5 +1,6 @@
 $background: #f3f3f3;
 $date-color: #555;
+$copyright-color: $date-color;
 $dark: #22232a;
 //$highlight: #30b337;
 //$highlight: #02a82e;
@@ -104,7 +105,6 @@ $animation-float-up: 'float-up 0.10s ease 1';
 }
 
 * {
-  background-color: $background;
   color: $dark;
   font-family: 'Source Sans Pro', sans-serif;
   @include text-shadow;
@@ -119,6 +119,7 @@ a {
 }
 
 body {
+  background-color: $background;
   margin-right: calc(100vw - 100%);
 }
 
@@ -139,7 +140,7 @@ p {
 .contact-section {
   align-items: center;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   width: 100%;
 
@@ -161,6 +162,11 @@ p {
   h1, h2, h3, p {
     @include content-padding;
   }
+}
+
+.copyright {
+  color: $copyright-color;
+  font-size: 1rem;
 }
 
 .date {
@@ -204,8 +210,12 @@ p {
 .icon-link {
   background-color: $highlight;
   border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
+  padding: 0.5rem;
+
+  a img {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .jumbotron {

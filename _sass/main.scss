@@ -1,5 +1,8 @@
 $dark: #22232a;
-$highlight: #555;
+//$highlight: #30b337;
+//$highlight: #02a82e;
+$highlight: #269d02;
+$date-color: #555;
 $hor-rule-color: #ddd9d6;
 $background: #f3f3f3;
 
@@ -106,6 +109,10 @@ $animation-float-up: 'float-up 0.10s ease 1';
   @include text-shadow;
 }
 
+a {
+  color: $highlight;
+}
+
 body {
   margin-right: calc(100vw - 100%);
 }
@@ -136,7 +143,7 @@ p {
 }
 
 .date {
-  color: $highlight;
+  color: $date-color;
   font-size: 1rem;
   line-height: 1.25rem;
 }

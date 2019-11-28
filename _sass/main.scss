@@ -125,22 +125,27 @@ body {
 
 h1 {
   font-size: $font-base-size + 1.0rem;
+  color: $dark;
 }
 
 h2 {
   font-size: $font-base-size + 0.75rem;
+  color: $dark;
 }
 
 h3 {
   font-size: $font-base-size + 0.5rem;
+  color: $dark;
 }
 
 h4 {
   font-size: $font-base-size + 0.25rem;
+  color: $dark;
 }
 
 h5 {
   font-size: $font-base-size;
+  color: $dark;
 }
 
 html {

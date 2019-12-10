@@ -6,14 +6,4 @@ title: Projects
 {% for project in site.projects %}
   <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
   <p>{{ project.excerpt }}</p>
-  <h3>{{ project.name }} recent posts</h3>
-  <ul>
-    {% assign filtered_posts = site.posts | where: 'project', project.shortname | limit: 5 %}
-    {% for post in filtered_posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <div class="date">{{ post.date | date_to_string }}</div>
-    </li>
-    {% endfor %}
-  </ul>
 {% endfor %}

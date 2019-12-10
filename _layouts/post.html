@@ -4,4 +4,9 @@ layout: default
 <h1>{{ page.title }}</h1>
 {{ content }}
 
+
+{% if page.project != empty and page.project != nil %}
+  {% assign project_obj = site.projects | where: "short_name", page.project | first %}
+  <p> Part of <a href="{{ project_obj.url }}">{{ project_obj.name }}</a> project.</p>
+{% endif %}
 <p class="date">{{ page.date | date_to_string }} - Written by {{ page.author }}</p>

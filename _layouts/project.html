@@ -3,3 +3,14 @@ layout: default
 ---
 <h1>{{ page.name }}</h1>
 {{ content }}
+
+<h3>{{ page.name }} posts</h3>
+<ul>
+  {% assign filtered_posts = site.posts | where: 'project', page.shortname %}
+  {% for post in filtered_posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <div class="date">{{ post.date | date_to_string }}</div>
+    </li>
+  {% endfor %}
+</ul>

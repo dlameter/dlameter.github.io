@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+
+  <body>
+    <div class="container">
+      {% include navigation.html %}
+
+      <div class="page">
+        {{ content }}
+      </div>
+
+      {% include footer.html %}
+    </div>
+    
+    {% include scripts.html %}
+  </body>
+</html>

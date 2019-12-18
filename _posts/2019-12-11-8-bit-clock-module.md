@@ -3,7 +3,11 @@ layout: post
 title: 8-bit CPU - Clock Module
 project: 8bitcpu
 author: Dominik Lameter
+excerpt: "This post describes my experience and what I learned building the clock module, an essential piece for the 8-bit CPU."
 ---
+
+{% include jumbotron.html source="/assets/images/8bitClockModule.jpg" text="Clock module built on a breadboard" %}
+
 This is the first post in a series that will detail my processes and learning experiences for building an 8-bit CPU from the chip level, and is not intended to be a re-writing of [Ben Eater’s YouTube series](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU). In this post I will detail the purpose of this first board, the basics of the components, how I went about constructing this first breadboard, and what I learned from the clock module.
 
 Unsurprisingly, I began with the clock module for the CPU. This module is central to CPU as a whole and outputs a pulse or oscillation that synchronizes many of the discrete circuits within the CPU. Some examples of key pieces that use the clock to synchronize include the registers, RAM, and the various buses and links between discrete portions of the CPU.
